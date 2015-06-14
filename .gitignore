@@ -1,2 +1,3 @@
+*.pyc
 ja2-data-dump/*
 saves/*
