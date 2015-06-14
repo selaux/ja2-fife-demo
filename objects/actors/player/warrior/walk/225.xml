@@ -1,0 +1,14 @@
+<animation delay="83" namespace="http://www.fifengine.net/xml/rpg" id="warrior:walk" x_offset="0" y_offset="0">
+	<frame source="../../../../../ja2-data-dump/Anims/M_MERC/M_N_WALK.PNG/5/0.png" />
+	<frame source="../../../../../ja2-data-dump/Anims/M_MERC/M_N_WALK.PNG/5/1.png" />
+	<frame source="../../../../../ja2-data-dump/Anims/M_MERC/M_N_WALK.PNG/5/2.png" />
+	<frame source="../../../../../ja2-data-dump/Anims/M_MERC/M_N_WALK.PNG/5/3.png" />
+	<frame source="../../../../../ja2-data-dump/Anims/M_MERC/M_N_WALK.PNG/5/4.png" />
+	<frame source="../../../../../ja2-data-dump/Anims/M_MERC/M_N_WALK.PNG/5/5.png" />
+	<frame source="../../../../../ja2-data-dump/Anims/M_MERC/M_N_WALK.PNG/5/6.png" />
+	<frame source="../../../../../ja2-data-dump/Anims/M_MERC/M_N_WALK.PNG/5/7.png" />
+	<frame source="../../../../../ja2-data-dump/Anims/M_MERC/M_N_WALK.PNG/5/8.png" />
+	<frame source="../../../../../ja2-data-dump/Anims/M_MERC/M_N_WALK.PNG/5/9.png" />
+	<frame source="../../../../../ja2-data-dump/Anims/M_MERC/M_N_WALK.PNG/5/10.png" />
+	<frame source="../../../../../ja2-data-dump/Anims/M_MERC/M_N_WALK.PNG/5/11.png" />
+</animation>

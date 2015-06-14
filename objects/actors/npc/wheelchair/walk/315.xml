@@ -1,0 +1,14 @@
+<animation delay="83" namespace="http://www.fifengine.net/xml/rpg" id="warrior:walk" x_offset="0" y_offset="0">
+	<frame source="../../../../../ja2-data-dump/Anims/CIVS/C_WALK.PNG/3/0.png" />
+	<frame source="../../../../../ja2-data-dump/Anims/CIVS/C_WALK.PNG/3/1.png" />
+	<frame source="../../../../../ja2-data-dump/Anims/CIVS/C_WALK.PNG/3/2.png" />
+	<frame source="../../../../../ja2-data-dump/Anims/CIVS/C_WALK.PNG/3/3.png" />
+	<frame source="../../../../../ja2-data-dump/Anims/CIVS/C_WALK.PNG/3/4.png" />
+	<frame source="../../../../../ja2-data-dump/Anims/CIVS/C_WALK.PNG/3/5.png" />
+	<frame source="../../../../../ja2-data-dump/Anims/CIVS/C_WALK.PNG/3/6.png" />
+	<frame source="../../../../../ja2-data-dump/Anims/CIVS/C_WALK.PNG/3/7.png" />
+	<frame source="../../../../../ja2-data-dump/Anims/CIVS/C_WALK.PNG/3/8.png" />
+	<frame source="../../../../../ja2-data-dump/Anims/CIVS/C_WALK.PNG/3/9.png" />
+	<frame source="../../../../../ja2-data-dump/Anims/CIVS/C_WALK.PNG/3/10.png" />
+	<frame source="../../../../../ja2-data-dump/Anims/CIVS/C_WALK.PNG/3/11.png" />
+</animation>

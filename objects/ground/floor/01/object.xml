@@ -1,0 +1,7 @@
+<?fife type="object"?>
+<object id="floor:01" namespace="http://www.fifengine.net/xml/rpg" blocking="0" static="1">
+	<image source="../../../../ja2-data-dump/Tilesets/0/FLOOR_2.PNG/0.png" direction="45" />
+	<image source="../../../../ja2-data-dump/Tilesets/0/FLOOR_2.PNG/1.png" direction="135" />
+	<image source="../../../../ja2-data-dump/Tilesets/0/FLOOR_2.PNG/2.png" direction="225" />
+	<image source="../../../../ja2-data-dump/Tilesets/0/FLOOR_2.PNG/3.png" direction="315" />
+</object>

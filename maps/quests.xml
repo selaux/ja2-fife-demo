@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Settings>
+  <Module name="QuestGivers">
+    <Setting name="list" type="list"> Quiller </Setting>
+  </Module>
+  <Module name="Quiller">
+   	<Setting name="questlist" type="list"> test_quest1 ; test_quest2 </Setting>
+   	<Setting name="test_quest1" type="dict"> type : RETURN_ITEM ; quest_incomplete_dialog : Come back with my CAW! ; quest_complete_dialog : Thank you for finding my CAW. ; name : First CAW! ; desc : Aloha! I might have lost one of my caws, would you please bring it back to me?</Setting>
+   	<Setting name="test_quest2" type="dict"> type : RETURN_ITEM ; quest_incomplete_dialog : Bah! I know there was a second one! ; quest_complete_dialog : Now I can kill double the people. ; name : More CAWs! ; desc : Now I remember that I actually had two CAWs, but I just remember sitting down. Bring me the other one, NOW!</Setting>
+  </Module>
+  <Module name="test_quest1_items">
+  	<Setting name="itemlist" type="list"> gold1 </Setting>
+  	<Setting name="gold1" type="dict"> name : GOLD_COINS ; value : 5000 </Setting>
+  </Module>
+  <Module name="test_quest2_items">
+  	<Setting name="itemlist" type="list"> gold1 </Setting>
+  	<Setting name="gold1" type="dict"> name : GOLD_COINS ; value : 5000 </Setting>
+  </Module>
+</Settings>

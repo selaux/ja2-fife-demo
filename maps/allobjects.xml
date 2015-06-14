@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Settings>
+  <Module name="models">
+    <Setting name="Player" type="dict"> file : objects/actors/player/warrior/object.xml ; model : warrior </Setting>
+    <Setting name="GoldStack" type="dict"> file : objects/items/goldstack/object.xml ; model : goldstack </Setting>
+    <Setting name="Quiller" type="dict"> file : objects/actors/npc/wheelchair/object.xml ; model : wheelchair </Setting>
+    <Setting name="Monster" type="dict"> file : objects/actors/npc/cat/object.xml ; model : cat </Setting>
+	  <Setting name="Chair" type="dict"> file : objects/items/furniture/chair/object.xml ; model : furniture:chair </Setting>
+    <Setting name="Table" type="dict"> file : objects/items/furniture/table/object.xml ; model : furniture:table </Setting>
+  </Module>
+
+  <Module name="objects">
+    <Setting name="goldstack" type="dict"> type : GOLD ; modelname : GoldStack ; value : 5000 </Setting>
+    <Setting name="chair" type="dict"> type : PORTAL ; modelname : Chair ; dest : level1 </Setting>
+    <Setting name="table" type="dict"> type : PORTAL ; modelname : Table ; dest : town </Setting>
+    <Setting name="quiller" type="dict"> type : QUESTGIVER ; modelname : Quiller </Setting>
+    <Setting name="signenemy1" type="dict"> type : ENEMY ; modelname : Monster </Setting>
+  </Module>
+</Settings>

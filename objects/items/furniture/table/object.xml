@@ -1,0 +1,4 @@
+<?fife type="object"?>
+<object id="furniture:table" namespace="http://www.fifengine.net/xml/rpg" blocking="1" static="1">
+	<image source="../../../../ja2-data-dump/Tilesets/0/BASEFRN1.PNG/4.png" direction="45" />
+</object>
