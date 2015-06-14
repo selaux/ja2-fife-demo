@@ -38,7 +38,7 @@ from fife.extensions.fife_utils import getUserDataDirectory
 class KeyFilter(fife.IKeyFilter):
 	"""
 	This is the implementation of the fife.IKeyFilter class.
-	
+
 	Prevents any filtered keys from being consumed by fifechan.
 	"""
 	def __init__(self, keys):
@@ -51,8 +51,8 @@ class KeyFilter(fife.IKeyFilter):
 class ApplicationListener(fife.IKeyListener, fife.ICommandListener, fife.ConsoleExecuter):
 	"""
 	Listens for window commands, console commands and keyboard input.
-	
-	Does not process game related input.	
+
+	Does not process game related input.
 	"""
 	def __init__(self, engine, gamecontroller):
 		"""
@@ -61,21 +61,21 @@ class ApplicationListener(fife.IKeyListener, fife.ICommandListener, fife.Console
 		self._engine = engine
 		self._gamecontroller = gamecontroller
 		self._eventmanager = self._engine.getEventManager()
-		
+
 		fife.IKeyListener.__init__(self)
 		self._eventmanager.addKeyListener(self)
-		
+
 		fife.ICommandListener.__init__(self)
 		self._eventmanager.addCommandListener(self)
-		
+
 		fife.ConsoleExecuter.__init__(self)
 		get_manager().getConsole().setConsoleExecuter(self)
-		
+
 		keyfilter = KeyFilter([fife.Key.ESCAPE, fife.Key.BACKQUOTE, fife.Key.PRINT_SCREEN])
-		keyfilter.__disown__()		
-		
+		keyfilter.__disown__()
+
 		self._eventmanager.setKeyFilter(keyfilter)
-		
+
 		self.quit = False
 
 	def keyPressed(self, event):
@@ -87,7 +87,7 @@ class ApplicationListener(fife.IKeyListener, fife.ICommandListener, fife.Console
 
 		keyval = event.getKey().getValue()
 		keystr = event.getKey().getAsString().lower()
-		
+
 		if keyval == fife.Key.ESCAPE:
 			self.quit = True
 			event.consume()
@@ -108,14 +108,14 @@ class ApplicationListener(fife.IKeyListener, fife.ICommandListener, fife.Console
 
 	def onConsoleCommand(self, command):
 		result = ""
-		
+
 		args = command.split(" ")
 		cmd = []
 		for arg in args:
 			arg = arg.strip()
 			if arg != "":
-				cmd.append(arg)		
-		
+				cmd.append(arg)
+
 		if cmd[0].lower() in ('quit', 'exit'):
 			self.quit = True
 			result = 'quitting'
@@ -130,26 +130,32 @@ class ApplicationListener(fife.IKeyListener, fife.ICommandListener, fife.Console
 				result = "Invalid eval statement..."
 		else:
 			result = self._gamecontroller.onConsoleCommand(command)
-			
+
 		if not result:
 			result = 'Command Not Found...'
-		
+
 		return result
-		
+
 	def onToolsClick(self):
 		print "No tools set up yet"
 
 class RPGApplication(PychanApplicationBase):
 	"""
 	The main application.  It inherits fife.extensions.ApplicationBase.
-	
+
 	Implements ApplicationBase._pump().
 	"""
 	def __init__(self, TDS):
 		super(RPGApplication,self).__init__(TDS)
 		self._settings = TDS
-		
+
 		self._gamecontroller = GameController(self, self.engine, self._settings)
+
+		self.soundmanager = self.engine.getSoundManager()
+		self.soundmanager.init()
+
+		self.engine.speechEmitter = self.soundmanager.createEmitter()
+		self.engine.speechEmitter.setLooping(False)
 
 	def createListener(self):
 		"""
@@ -158,7 +164,7 @@ class RPGApplication(PychanApplicationBase):
 		"""
 		self._listener = ApplicationListener(self.engine, self._gamecontroller)
 		return self._listener
-		
+
 	def requestQuit(self):
 		"""
 		Sends the quit command to the application's listener.  We could set
@@ -176,9 +182,9 @@ class RPGApplication(PychanApplicationBase):
 			self.quit()
 		else:
 			self._gamecontroller.pump()
-			
-			
+
+
 	def _getLogManager(self):
 		return self._log
-		
+
 	logger = property(_getLogManager)
